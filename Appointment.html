@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top-nav">
+    <div class="logo-container">
+      <img src="logo.webp" alt="Hospital Logo" />
+      <h3>BigM Hospital</h3>
+    </div>
+
+    <input id="menu-toggle" type="checkbox" />
+    <label class="menu-button-container" for="menu-toggle">
+      <span class="menu-button"></span>
+    </label>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="Patient.html">Patient Management</a></li>
+        <li><a href="Appointment.html">Appointments</a></li>
+        <li><a href="Billing.html">Billing</a></li>
+        <li><a href="Staff.html">Staff</a></li>
+      </ul>
+    </nav>
+  </header>
+    <!-- === Header Section === -->
+    <header class="header">
+      <h1>Appointments</h1>
+    </header>
+  
+    <!-- === Appointment Form Section === -->
+    <section class="form-section">
+      <h2>Book an Appointment</h2>
+      <form id="appointmentForm">
+        <input type="text" id="patientName" placeholder="Patient Name" required />
+        <input type="text" id="doctorName" placeholder="Doctor Name" required />
+        <input type="date" id="date" required />
+        <input type="time" id="time" required />
+        <button type="submit">Schedule</button>
+      </form>
+    </section>
+  
+    <!-- === Appointments Table Section === -->
+    <section class="table-section">
+      <h2>Scheduled Appointments</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody id="appointmentTableBody">
+          <!-- Appointments will appear here -->
+        </tbody>
+      </table>
+    </section>
+  
+  <footer id="term-condition">
+    <p>&copy; 2025 BigM Hospital. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- === Top Navigation === -->
+  <header class="top-nav">
+    <div class="logo-container">
+      <img src="logo.webp" alt="Hospital Logo" />
+      <h3>BigM Hospital</h3>
+    </div>
+
+    <input id="menu-toggle" type="checkbox" />
+    <label class="menu-button-container" for="menu-toggle">
+      <span class="menu-button"></span>
+    </label>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="Patient.html">Patient Management</a></li>
+        <li><a href="Appointment.html">Appointments</a></li>
+        <li><a href="Billing.html">Billing</a></li>
+        <li><a href="Staff.html">Staff</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- === Carousel Section === -->
+  <section class="carousel-section">
+    <div class="carousel">
+      <img src="Hospitel Bed.webp" class="active" data-title="Hospital Bed" data-desc="Supporting Recovery, One Bed at a Time.">
+      <img src="Doctor's office desk and chair.webp" data-title="Doctor's Desk" data-desc="The Perfect Seat for Precision and Care.">
+      <img src="Waiting room chairs.webp" data-title="Waiting Room" data-desc="Waiting Made More Comfortable.">
+      <img src="Operation theater table.webp" data-title="Operation Table" data-desc="A Foundation for Life-Saving Precision.">
+      <img src="Pharmacy counter and shelves.webp" data-title="Pharmacy" data-desc="Organized for Health, Stocked for Life.">
+
+      <div class="info-tab animate-fade-in">
+        <h2 id="wallpaper-title">Hospital Bed</h2>
+        <p id="wallpaper-desc">Supporting Recovery, One Bed at a Time.</p>
+      </div>
+
+      <div class="nav-buttons">
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Information Section === -->
+  <section id="about">
+    <div id="Information">
+      <h1 class="Heading animate-fade-in">Information</h1>
+      <div class="box">
+        <div class="animate-fade-in">
+          <img src="Hospitel Bed.webp" alt="">
+          <h2>Hospital Bed</h2>
+          <p>Designed for maximum comfort and care.</p>
+        </div>
+        <div class="animate-fade-in">
+          <img src="Doctor's office desk and chair.webp" alt="">
+          <h2>Doctor's Desk</h2>
+          <p>Ergonomic workspace for precise care.</p>
+        </div>
+        <div class="animate-fade-in">
+          <img src="Waiting room chairs.webp" alt="">
+          <h2>Waiting Room</h2>
+          <p>Comfort during the wait.</p>
+        </div>
+        <div class="animate-fade-in">
+          <img src="Operation theater table.webp" alt="">
+          <h2>Operation Table</h2>
+          <p>Stability for every surgery.</p>
+        </div>
+        <div class="animate-fade-in">
+          <img src="Pharmacy counter and shelves.webp" alt="">
+          <h2>Pharmacy</h2>
+          <p>Organized inventory, always ready.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Footer === -->
+  <footer id="term-condition">
+    <p>&copy; 2025 BigM Hospital. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

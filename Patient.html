@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top-nav">
+    <div class="logo-container">
+      <img src="logo.webp" alt="Hospital Logo" />
+      <h3>BigM Hospital</h3>
+    </div>
+
+    <input id="menu-toggle" type="checkbox" />
+    <label class="menu-button-container" for="menu-toggle">
+      <span class="menu-button"></span>
+    </label>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="Patient.html">Patient Management</a></li>
+        <li><a href="Appointment.html">Appointments</a></li>
+        <li><a href="Billing.html">Billing</a></li>
+        <li><a href="Staff.html">Staff</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- === Header Section === -->
+  <header class="header">
+    <h1>Patient Management</h1>
+  </header>
+
+  <!-- === Form Section for Adding Patient === -->
+  <section class="form-section">
+    <h2>Add New Patient</h2>
+    <form id="patientForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="number" id="age" placeholder="Age" required />
+      <select id="gender" name="gender"  >
+        <option value="">Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+          <input type="text" id="disease" placeholder="Disease / Condition" required />
+      <button type="submit">Add Patient</button>
+    </form>
+  </section>
+
+  <!-- === Table Section to Display Patients === -->
+  <section class="table-section">
+    <h2>Patient List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Disease</th>
+        </tr>
+      </thead>
+      <tbody id="patientTableBody">
+        <!-- New patients will be added here -->
+      </tbody>
+    </table>
+  </section>
+
+
+  
+  <footer id="term-condition">
+    <p>&copy; 2025 BigM Hospital. All rights reserved.</p>
+  </footer>
+
+
+
+  
+  <script src="script.js"></script>
+</body>
+</html>

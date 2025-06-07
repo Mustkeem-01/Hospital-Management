@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top-nav">
+    <div class="logo-container">
+      <img src="logo.webp" alt="Hospital Logo" />
+      <h3>BigM Hospital</h3>
+    </div>
+
+    <input id="menu-toggle" type="checkbox" />
+    <label class="menu-button-container" for="menu-toggle">
+      <span class="menu-button"></span>
+    </label>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="Patient.html">Patient Management</a></li>
+        <li><a href="Appointment.html">Appointments</a></li>
+        <li><a href="Billing.html">Billing</a></li>
+        <li><a href="Staff.html">Staff</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <!-- === Header Section === -->
+    <header class="header">
+      <h1>Billing</h1>
+    </header>
+  
+    <!-- === Billing Form Section === -->
+    <section class="form-section">
+      <h2>Generate Patient Bill</h2>
+      <form id="billingForm">
+        <input type="text" id="patientName" placeholder="Patient Name" required />
+        <input type="number" id="roomCharges" placeholder="Room Charges ($)" required />
+        <input type="number" id="doctorFee" placeholder="Doctor Fee ($)" required />
+        <input type="number" id="medicationCost" placeholder="Medication Cost ($)" required />
+        <button type="submit">Generate Bill</button>
+      </form>
+    </section>
+  
+    <!-- === Billing Table Section === -->
+    <section class="table-section">
+      <h2>Bills</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Patient</th>
+            <th>Room Charges</th>
+            <th>Doctor Fee</th>
+            <th>Medication</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="billingTableBody">
+          <!-- Bills will appear here -->
+        </tbody>
+      </table>
+    </section>
+  
+
+  <footer id="term-condition">
+    <p>&copy; 2025 BigM Hospital. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

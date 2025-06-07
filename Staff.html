@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top-nav">
+    <div class="logo-container">
+      <img src="logo.webp" alt="Hospital Logo" />
+      <h3>BigM Hospital</h3>
+    </div>
+
+    <input id="menu-toggle" type="checkbox" />
+    <label class="menu-button-container" for="menu-toggle">
+      <span class="menu-button"></span>
+    </label>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="Patient.html">Patient Management</a></li>
+        <li><a href="Appointment.html">Appointments</a></li>
+        <li><a href="Billing.html">Billing</a></li>
+        <li><a href="Staff.html">Staff</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <header>
+    <h1>Our Dedicated Staff</h1>
+    <p>Meet the team that makes our hospital a beacon of care and compassion</p>
+</header>
+<section class="staff-container">
+  <h2>Our Team</h2>
+  <div class="staff-grid" id="staffGrid">
+      <!-- Staff cards will be dynamically inserted here -->
+  </div>
+</section>
+
+
+  
+  <footer id="term-condition">
+    <p>&copy; 2025 BigM Hospital. All rights reserved.</p>
+  </footer>
+
+  <script src="staff.js">
+    
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,622 @@
+
+/* === General Reset and Base Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  margin-bottom: 70px;
+}
+
+/* === Header & Navigation === */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0077b6;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-container img {
+  height: 40px;
+  width: auto;
+}
+
+.logo-container h3 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.menu-button-container {
+  display: none;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 0.3rem;
+}
+
+.menu li a:hover {
+  background-color: #005f8a;
+}
+
+/* === Responsive Navigation === */
+#menu-toggle {
+  display: none;
+}
+ 
+@media (max-width: 900px) {
+  
+}
+
+
+
+@media (max-width:1000px ){
+  .menu-button-container {
+    display: block;
+    cursor: pointer;
+    margin-left:  20%;
+   
+  }
+
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    background-color: #fff;
+    content: "";
+    display: block;
+    height: 4px;
+    margin: 6px 0;
+    width: 25px;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    background-color: #0077b6;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding-top: 1rem;
+  }
+
+  #menu-toggle:checked ~ nav .menu {
+    display: flex;
+  }
+
+  .menu li {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+}
+
+/* === Carousel Section === */
+.carousel-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.carousel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.carousel img.active {
+  opacity: 1;
+}
+
+.info-tab {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  max-width: 90%;
+}
+
+.info-tab h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-tab p {
+  font-size: 1rem;
+}
+
+.nav-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.nav-buttons button {
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+.nav-buttons button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* === Information Section === */
+#Information {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.Heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0077b6;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.box div {
+  background: #fff;
+  padding: 1rem;
+  width: 250px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.box div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.box img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+/* === Footer === */
+#term-condition {
+  background: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* === Animation Styles === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .carousel-section {
+    height: 300px;
+  }
+
+  .box div {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .box div {
+    width: 90%;
+  }
+
+  .carousel-section {
+    height: 250px;
+  }
+
+  .Heading {
+    font-size: 1.5rem;
+  }
+}
+
+/******************   Patiant management *******************/
+
+/* === Header === */
+.header {
+  background-color: #0077b6;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* === Form Section === */
+.form-section {
+  padding: 1rem 2rem;
+  background-color: #fff;
+  margin: 1rem auto;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+  margin-bottom: 1rem;
+  color: #0077b6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+form input, form button ,select {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #005f8a;
+}
+
+/* === Table Section === */
+.table-section {
+  padding: 1rem 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.table-section h2 {
+  margin-bottom: 1rem;
+  color: #0077b6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+/**************   Appointment ****************************/
+
+/* === Header Section === */
+.header {
+  background-color: #264653;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* === Form Styling === */
+.form-section {
+  background: white;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+  color: #264653;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, button {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #21867a;
+  transform: scale(1.05);
+}
+
+/* === Table Styling === */
+.table-section {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.table-section h2 {
+  color: #264653;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #e0f7f4;
+  color: #264653;
+}
+
+
+
+
+/************************       Billing **************************/
+
+
+/* === Header Section === */
+.header {
+  background-color: #8e44ad;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* === Form Section Styling === */
+.form-section {
+  background: white;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+  color: #8e44ad;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, button {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #7e3790;
+  transform: scale(1.05);
+}
+
+/* === Table Section === */
+.table-section {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.table-section h2 {
+  color: #8e44ad;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f5e8fb;
+  color: #4a235a;
+}
+
+
+/*********************   Staff  *********************************/
+
+          /* Header Styles */
+          header {
+            background-color: #007bff;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+
+                /* Staff Section */
+                .staff-container {
+                  max-width: 1200px;
+                  margin: 3rem auto;
+                  padding: 0 2rem;
+              }
+      
+              .staff-container h2 {
+                  text-align: center;
+                  font-size: 2rem;
+                  margin-bottom: 2rem;
+                  color: #007bff;
+              }
+      
+              .staff-grid {
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                  gap: 2rem;
+              }
+      
+              .staff-card {
+                  background-color: white;
+                  border-radius: 10px;
+                  overflow: hidden;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                  transition: transform 0.3s, box-shadow 0.3s;
+                  text-align: center;
+              }
+      
+              .staff-card:hover {
+                  transform: translateY(-5px);
+                  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+              }
+      
+              .staff-card img {
+                  width: 100%;
+                  height: 200px;
+                  object-fit: cover;
+              }
+      
+              .staff-info {
+                  padding: 1.5rem;
+              }
+      
+              .staff-info h3 {
+                  font-size: 1.4rem;
+                  color: #333;
+                  margin-bottom: 0.5rem;
+              }
+      
+              .staff-info p {
+                  font-size: 1rem;
+                  color: #666;
+                  margin-bottom: 0.5rem;
+              }
+      
+              .staff-info .specialty {
+                  font-style: italic;
+                  color: #007bff;
+              }
+      
+              .staff-info .experience {
+                  font-size: 0.9rem;
+                  color: #555;
+              }
+      
+              .staff-info .bio {
+                  font-size: 0.85rem;
+                  color: #777;
+                  line-height: 1.4;
+                  margin-top: 0.5rem;
+              }
+      
